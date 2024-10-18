@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Bulan dari bahasa Indonesia ke bahasa Prancis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Konversi Bulan Indonesia ke Prancis</h1>
+    <p>Masukkan nama bulan dalam Bahasa Indonesia:</p>
+
+    <input type="text" id="bulanInput" placeholder="Contoh: Januari">
+    <button onclick="konversiBulan()">Konversi</button>
+
+    <div id="result"></div>
+
+    <script>
+        function konversiBulan() {
+            const bulanIndonesia = document.getElementById('bulanInput').value.trim().toLowerCase();
+            let bulanPerancis;
+
+            switch (bulanIndonesia) {
+                case "januari":
+                    bulanPerancis = "janvier";
+                    break;
+                case "februari":
+                    bulanPerancis = "février";
+                    break;
+                case "maret":
+                    bulanPerancis = "mars";
+                    break;
+                case "april":
+                    bulanPerancis = "avril";
+                    break;
+                case "mei":
+                    bulanPerancis = "mai";
+                    break;
+                case "juni":
+                    bulanPerancis = "juin";
+                    break;
+                case "juli":
+                    bulanPerancis = "juillet";
+                    break;
+                case "agustus":
+                    bulanPerancis = "août";
+                    break;
+                case "september":
+                    bulanPerancis = "septembre";
+                    break;
+                case "oktober":
+                    bulanPerancis = "octobre";
+                    break;
+                case "november":
+                    bulanPerancis = "novembre";
+                    break;
+                case "desember":
+                    bulanPerancis = "décembre";
+                    break;
+                default:
+                    bulanPerancis = "Bulan tidak valid!";
+            }
+
+            document.getElementById('result').textContent = bulanPerancis;
+        }
+    </script>
+
+</body>
+</html>

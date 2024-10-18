@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Kuadrat Angka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menghitung Kuadrat Angka</h1>
+    <p>Masukkan angka untuk menghitung kuadratnya:</p>
+
+    <input type="number" id="numberInput" placeholder="Masukkan angka">
+    <button onclick="hitungKuadrat()">Hitung</button>
+
+    <div id="result"></div>
+
+    <script>
+        function hitungKuadrat() {
+            const angka = document.getElementById('numberInput').value;
+            const kuadrat = angka * angka;
+            document.getElementById('result').textContent = `Kuadrat dari ${angka} adalah ${kuadrat}`;
+        }
+    </script>
+    
+</body>
+</html>
